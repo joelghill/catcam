@@ -25,6 +25,6 @@ class CamTweets:
         except Exception as e:
             print('Failed to update timeline: ' + str(e))
 
-tweets = CamTweets()
-tweets.authorize()
-tweets.update_timeline("TEST POST FROM RASPBERRY PI. PLEASE IGNORE.", "./test.jpg")
+#tweets = CamTweets()
+#tweets.authorize()
+#tweets.update_timeline("TEST POST FROM RASPBERRY PI. PLEASE IGNORE.", "./test.jpg")

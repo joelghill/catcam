@@ -105,6 +105,6 @@ class SonicDistanceMonitor() :
 def print_distance(distance):
     print("Distance is: " + str(distance) + "m")
 
-monitor = SonicDistanceMonitor(print_distance)
-monitor.start(0.2)
+#monitor = SonicDistanceMonitor(print_distance)
+#monitor.start(0.2)
 
