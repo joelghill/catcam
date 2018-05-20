@@ -7,6 +7,7 @@ class SonicDistanceMonitor() :
     _pin_trigger = 4
     _pin_echo = 17
     _is_running = False
+    _invoke_delegate_count = 3
 
     on_distance_change = None
 
@@ -20,7 +21,7 @@ class SonicDistanceMonitor() :
         self._pin_echo = echo
         self.on_distance_change = callback
 
-    def start(self, offset, wait=0.5) :
+    def start(self, offset=0.2, wait=0.5, lower_threshold=2, upper_threshold=5) :
         """
         Begins monitoring for distance changes
         offset - The amount of change in distance before callback is activated
@@ -31,16 +32,22 @@ class SonicDistanceMonitor() :
 
         self._prepare()
         self._is_running = True
+        distance_change_count = 0
 
         print('Monitoring distance')
         while(self._is_running == True):
             distance = self._get_distance()
-            if(last_distance != None):
-                change = abs(distance - last_distance)
-                if(change >= delta_offset and self.on_distance_change != None):
-                    self.on_distance_change(distance)
-
-            last_distance = distance
+            if(distance < upper_threshold) :
+                if(last_distance != None) :
+                    change = abs(distance - last_distance)
+                    if(change >= delta_offset) : 
+                        distance_change_count = 0
+                    else :
+                        distance_change_count = distance_change_count + 1
+                last_distance = distance
+            if(self.on_distance_change != None
+                    and distance_change_count == self._invoke_delegate_count) :
+                self.on_distance_change(distance)
             time.sleep(wait)
 
     def stop(self):
@@ -61,7 +68,7 @@ class SonicDistanceMonitor() :
             GPIO.setup(self._pin_echo, GPIO.IN, pull_up_down = GPIO.PUD_UP)
 
             print "Waiting for sensor to settle"
-            time.sleep(1)
+            time.sleep(10)
 
             print("ready to calculate distance")
 

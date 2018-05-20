@@ -15,14 +15,13 @@ class CatVision :
 
     def __init__(self) :
         #Load the model
-        self._model = resnet50.ResNet50(weights='imagenet')
+        self._model = inception_v3.InceptionV3(weights='imagenet')
 
     def identify_image(self, image_path) :
             
         # load the image
         print("[INFO] loading the image: " + image_path)
         original = load_img(image_path, target_size=(224, 224))
-        print('PIL image size' + str(original.size))
          
         # pre-process the image for classification
         print("[INFO] preprocessing image...")
@@ -30,17 +29,15 @@ class CatVision :
         # IN PIL - image is in (width, height, channel)
         # In Numpy - image is in (height, width, channel)
         numpy_image = img_to_array(original)
-        print('numpy array size',numpy_image.shape)
          
         # Convert the image / images into batch format
         # expand_dims will add an extra dimension to the data at a particular axis
         # We want the input matrix to the network to be of the form (batchsize, height, width, channels)
         # Thus we add the extra dimension to the axis 0.
         image_batch = np.expand_dims(numpy_image, axis=0)
-        print('image batch size', image_batch.shape)
 
         # prepare image for resnet50 model
-        processed_image = resnet50.preprocess_input(image_batch.copy())
+        processed_image = inception_v3.preprocess_input(image_batch.copy())
 
         # get the predicted probabilities for each class
         predictions = self._model.predict(processed_image)
@@ -48,9 +45,7 @@ class CatVision :
          
         # convert the probabilities to class labels
         decoded = resnet50.decode_predictions(predictions)
-        
         friendly_predictions = CatVision._get_friendly_predictions(decoded[0])
-
         return friendly_predictions
 
 
@@ -67,30 +62,9 @@ class CatVision :
     @staticmethod
     def _get_friendly_predictions(numpy_predictions) :
         predictions = {}
-        print("There are " + str(len(numpy_predictions)) + "predictions")
         for prediction in numpy_predictions :
-            print(str(prediction))
             name = CatVision._get_name(prediction)
             percentage = CatVision._get_percentage(prediction)
             predictions[name] = percentage
 
         return predictions
-
-
-
-
-#Testing the class
-
-# construct the argument parse and parse the arguments
-#ap = argparse.ArgumentParser()
-#ap.add_argument("-i", "--image", required=True, help="path to input image")
-
-#args = vars(ap.parse_args())
-
-#cat_vision = CatVision()
-#predictions = cat_vision.identify_image(args["image"])
-
-#for key in predictions :
-#   print(str(key) + " : " + str(predictions[key])) 
-
-

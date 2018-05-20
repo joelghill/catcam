@@ -19,9 +19,12 @@ class CamTweets:
         except Exception as e:
             print("Failed to authorize twitter account: " + str(e))
 
-    def update_timeline(self, text, image_path) :
+    def update_timeline(self, text, image_path=None) :
         try:
-            self._tweepy_api.update_with_media(image_path, text)
+            if image_path == None :
+                self._tweepy_api.update_status(text)
+            else:
+                self._tweepy_api.update_with_media(image_path, text)
         except Exception as e:
             print('Failed to update timeline: ' + str(e))
 
