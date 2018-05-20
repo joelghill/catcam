@@ -40,6 +40,10 @@ class TweetComposer:
         tweet_object = random.choice(self._tweets)
         keys = predictions.keys()
         text = tweet_object["message"].format(keys[0], keys[1], keys[2])
+
+        if tweet_object["upper_case"]:
+            text = text.upper()
+
         return text
 
     @staticmethod
