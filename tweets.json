@@ -3,43 +3,43 @@
     "object_count": 1,
     "min_confidence": null,
     "upper_case": false,
-    "message": "This is a %s."
+    "message": "This is a {}."
   },
   {
     "object_count": 2,
     "min_confidence": null,
     "upper_case": false,
-    "message": "With all of the presented evidence, I can reasonably conclude that this is a %s.... although it might be a %s."
+    "message": "With all of the presented evidence, I can reasonably conclude that this is a {0}.... although it might be a {1}."
   },
   {
     "object_count": 1,
     "min_confidence": null,
     "upper_case": false,
-    "message": "HEY EVERYONE LOOK AT THIS %s!"
+    "message": "HEY EVERYONE LOOK AT THIS {}!"
   },
   {
     "object_count": 1,
     "min_confidence": null,
     "upper_case": false,
-    "message": "Have you ever seen a more majestic %s?"
+    "message": "Have you ever seen a more majestic {}?"
   },
   {
     "object_count": 1,
     "min_confidence": null,
     "upper_case": false,
-    "message": "I'm so sick of all these unrealistic standards for beauty. Folks, this is what a REAL %s looks like."
+    "message": "I'm so sick of all these unrealistic standards for beauty. Folks, this is what a REAL {} looks like."
   },
   {
     "object_count": 1,
     "min_confidence": null,
     "upper_case": false,
-    "message": "Eww, %s."
+    "message": "Eww, {}."
   },
   {
     "object_count": 1,
     "min_confidence": null,
     "upper_case": false,
-    "message": "Some people choose to see the ugliness in this world, the disarray. I choose to see the beauty. Take this %s for example. "
+    "message": "Some people choose to see the ugliness in this world, the disarray. I choose to see the beauty. Take this {} for example. "
   },
   {
     "object_count": 0,
@@ -51,25 +51,25 @@
     "object_count": 1,
     "min_confidence": null,
     "upper_case": false,
-    "message": "Be not afraid of greatness: some are born great, some achieve greatness, and some have greatness thrust upon them. Like this %s"
+    "message": "Be not afraid of greatness: some are born great, some achieve greatness, and some have greatness thrust upon them. Like this {}"
   },
   {
     "object_count": 2,
     "min_confidence": null,
     "upper_case": false,
-    "message": "I want to say this is a %s. It could be a %s though."
+    "message": "I want to say this is a %s. It could be a {} though."
   },
   {
     "object_count": 1,
     "min_confidence": null,
     "upper_case": true,
-    "message": "BEHOLD, THE MIGHTY %s IN IT'S NATURAL HABITAT."
+    "message": "BEHOLD, THE MIGHTY {} IN IT'S NATURAL HABITAT."
   },
   {
     "object_count": 1,
     "min_confidence": null,
     "upper_case": false,
-    "message": "It is in your best interests to gaze upon the beauty of this %s"
+    "message": "It is in your best interests to gaze upon the beauty of this {}"
   },
   {
     "object_count": 0,
@@ -81,78 +81,78 @@
     "object_count": 1,
     "min_confidence": null,
     "upper_case": true,
-    "message": "BEEP BOOP, I AM CAT CAM 9000. THIS IS A %s."
+    "message": "BEEP BOOP, I AM CAT CAM 9000. THIS IS A {}."
   },
   {
     "object_count": 1,
     "min_confidence": null,
     "upper_case": false,
-    "message": "What's in a name? That which we call a %s by any other name would smell as sweet."
+    "message": "What's in a name? That which we call a {} by any other name would smell as sweet."
   },
   {
     "object_count": 1,
     "min_confidence": null,
     "upper_case": false,
-    "message": "Look at this %s, just loafing around like it owns the place."
+    "message": "Look at this {}, just loafing around like it owns the place."
   },
   {
     "object_count": 1,
     "min_confidence": null,
     "upper_case": false,
-    "message": "...Annnnd folks if you look to your right you'll see one of our finest attractions: a %s"
+    "message": "...Annnnd folks if you look to your right you'll see one of our finest attractions: a {}"
   },
   {
     "object_count": 1,
     "min_confidence": null,
     "upper_case": false,
-    "message": "Pssst. Hey, you.... wanna see a %s?"
+    "message": "Pssst. Hey, you.... wanna see a {}?"
   },
   {
     "object_count": 1,
     "min_confidence": null,
     "upper_case": false,
-    "message": "The numbers don't lie, this is a %s"
+    "message": "The numbers don't lie, this is a {}"
   },
   {
     "object_count": 1,
     "min_confidence": null,
     "upper_case": true,
-    "message": "COME ON %s, DO SOMETHING"
+    "message": "COME ON {}, DO SOMETHING"
   },
   {
     "object_count": 1,
     "min_confidence": null,
     "upper_case": false,
-    "message": "“A million dollars isn’t cool. You know what’s cool? A %s”"
+    "message": "“A million dollars isn’t cool. You know what’s cool? A {}”"
   },
   {
     "object_count": 1,
     "min_confidence": null,
     "upper_case": false,
-    "message": "“This %s is a beautiful gift to humanity. Cherish it.”"
+    "message": "“This {} is a beautiful gift to humanity. Cherish it.”"
   },
   {
     "object_count": 1,
     "min_confidence": null,
     "upper_case": false,
-    "message": "“Knock Knock.\n\nWho's there?\n\n%s\n\n%s who?\n\nNo, just %s.”"
+    "message": "“Knock Knock.\n\nWho's there?\n\n{0}\n\n{0} who?\n\nNo, just {0}.”"
   },
   {
     "object_count": 1,
     "min_confidence": null,
     "upper_case": false,
-    "message": "“Where did all of these %s(s) come from anyway?”"
+    "message": "“Where did all of these {}(s) come from anyway?”"
   },
   {
     "object_count": 1,
     "min_confidence": null,
     "upper_case": true,
-    "message": "“DANGER DANGER, %s DETECTED.”"
+    "message": "“DANGER DANGER, {} DETECTED.”"
   },
   {
     "object_count": 1,
     "min_confidence": null,
     "upper_case": true,
-    "message": "“i love $s”"
+    "message": "“i love {}”"
   }
 ]

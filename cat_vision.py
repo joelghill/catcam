@@ -50,19 +50,19 @@ class CatVision :
 
 
     @staticmethod
-    def _get_name(numpy_prediction) :
+    def _get_name(numpy_prediction):
         name = numpy_prediction[1]
         name = name.replace('_', ' ')
         return name
 
     @staticmethod
-    def _get_percentage(numpy_prediction) :
+    def _get_percentage(numpy_prediction):
         return numpy_prediction[2] * 100
 
     @staticmethod
-    def _get_friendly_predictions(numpy_predictions) :
+    def _get_friendly_predictions(numpy_predictions):
         predictions = {}
-        for prediction in numpy_predictions :
+        for prediction in numpy_predictions:
             name = CatVision._get_name(prediction)
             percentage = CatVision._get_percentage(prediction)
             predictions[name] = percentage
